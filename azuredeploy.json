@@ -33,7 +33,7 @@
             "type": "string"
         },
         "adminUsername": {
-            "type": "string"
+            "type": "serversupport"
         },
         "adminPassword": {
             "type": "secureString"
