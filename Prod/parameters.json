@@ -1,0 +1,83 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "uksouth"
+        },
+        "networkInterfaceName": {
+            "value": "VMNAME-nic"
+        },
+        "subnetName": {
+            "value": "Eccsec-eun-vnet-001-sub-10.55.96.0_24"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/fb1c2046-78b4-45db-a1ce-e0483a02e664/resourceGroups/eccrg-eccsec-eun-vnet-001/providers/Microsoft.Network/virtualNetworks/Eccsec-eun-vnet-001"
+        },
+        "virtualMachineName": {
+            "value": "VMNAME"
+        },
+        "virtualMachineRG": {
+            "value": "RESOURCE GROUP NAME"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "dataDisks": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "caching": "ReadOnly",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "VMNAME_DataDisk_0",
+                    "storageAccountType": null,
+                    "diskSizeGB": null
+                }
+            ]
+        },
+        "dataDiskResources": {
+            "value": [
+                {
+                    "name": "VMNAME_DataDisk_0",
+                    "diskSizeGB": 10,
+                    "sku": "Standard_LRS",
+                    "creationData": {
+                        "createOption": "empty"
+                    }
+                }
+            ]
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS1_v2"
+        },
+        "adminUsername": {
+            "value": "AzureServerSupport"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "stac002"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/fb1c2046-78b4-45db-a1ce-e0483a02e664/resourceGroups/rg002/providers/Microsoft.Storage/storageAccounts/stac002"
+        },
+        "autoShutdownStatus": {
+            "value": "Enabled"
+        },
+        "autoShutdownTime": {
+            "value": "19:00"
+        },
+        "autoShutdownTimeZone": {
+            "value": "UTC"
+        },
+        "autoShutdownNotificationStatus": {
+            "value": "Disabled"
+        },
+        "autoShutdownNotificationLocale": {
+            "value": "en"
+        }
+    }
+}
