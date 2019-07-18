@@ -1,0 +1,83 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "uksouth"
+        },
+        "networkInterfaceName": {
+            "value": "VMNAME-nic"
+        },
+        "subnetName": {
+            "value": "VMSub1"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/6363199b-f33e-4f95-bfbf-25047396817c/resourceGroups/pandi-msdn-virtualnetworks-rsg/providers/Microsoft.Network/virtualNetworks/VMNet1"
+        },
+        "virtualMachineName": {
+            "value": "VMNAME"
+        },
+        "virtualMachineRG": {
+            "value": "RESOURCE GROUP NAME"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "dataDisks": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "caching": "ReadOnly",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "VMNAME_DataDisk_0",
+                    "storageAccountType": null,
+                    "diskSizeGB": null
+                }
+            ]
+        },
+        "dataDiskResources": {
+            "value": [
+                {
+                    "name": "VMNAME_DataDisk_0",
+                    "diskSizeGB": 10,
+                    "sku": "Standard_LRS",
+                    "creationData": {
+                        "createOption": "empty"
+                    }
+                }
+            ]
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS1_v2"
+        },
+        "adminUsername": {
+            "value": "AzureServerSupport"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "vmdiagmsdn"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/6363199b-f33e-4f95-bfbf-25047396817c/resourceGroups/storagersg/providers/Microsoft.Storage/storageAccounts/vmdiagmsdn"
+        },
+        "autoShutdownStatus": {
+            "value": "Enabled"
+        },
+        "autoShutdownTime": {
+            "value": "19:00"
+        },
+        "autoShutdownTimeZone": {
+            "value": "UTC"
+        },
+        "autoShutdownNotificationStatus": {
+            "value": "Disabled"
+        },
+        "autoShutdownNotificationLocale": {
+            "value": "en"
+        }
+    }
+}
